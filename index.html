@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Surprise for Abi</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+        }
+        #myTeddy {
+            visibility: hidden; 
+            width: 250px;
+            height: auto;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            border-radius: 90px; /* Rounded edges */
+            cursor: pointer; /* Indicates teddy is clickable */
+        }
+        #message {
+            display: none;
+            font-size: 20px;
+            color: #d63384;
+            margin-top: 10px;
+        }
+        #message1 {
+            display: none;
+            font-size: 20px;
+            margin-top: 10px;
+            color:skyblue;
+        }
+        /*#myImage {
+            display: none;
+            width: 10px;
+            height: 10px;
+            margin-top: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }*/
+        #myVideo{
+            visibility: hidden;
+            height :10%;
+            width:40%;
+            transition: opacity 5s ease-in-out;
+            border-radius: 30px;
+
+
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #e60073;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Hey Abi! 💖</h1>
+    <p>Click the button below for a surprise!</p>
+    <button onclick="showTeddy()">Click Me</button>
+    <br><br>
+    
+    <!-- Teddy Image -->
+    <img id="myTeddy" src="teddy.jpeg" onclick="showVideo()">
+    <p id="message1">Click the teddy heart to know who is in the heart</p>
+    <p id="message">Just like this teddy, may your life always be filled with warmth and hugs! 🤗</p>
+
+    <div id="myImage">
+        <video id="myVideo" width="320" height="240" controls>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+    </div>
+    <!-- Message -->
+
+    <!-- Video -->
+    
+    <script>
+        function showTeddy() {
+            let teddy = document.getElementById("myTeddy");
+            let message = document.getElementById("message");
+            let message1 = document.getElementById("message1");
+
+            teddy.style.visibility = "visible";
+            setTimeout(() => {
+                teddy.style.opacity = "1";
+            }, 50);
+
+            message.style.display = "block";
+            message1.style.display = "block";
+        
+        }
+
+        function showVideo() {
+            let image = document.getElementById("myVideo");
+            image.style.visibility="visible";
+            setTimeout(() => {
+                image.style.opacity = "1";
+            }, 50);
+
+            let music = document.getElementById("bgMusic");
+
+            music.play(); // Automatically play the video when teddy is touched
+        }
+    </script>
+
+</body>
+</html>
