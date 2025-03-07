@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Surprise for Abi</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f2;
+        }
+        #myTeddy {
+           visibility: hidden;
+            width: 250px;
+            height: auto;
+            transition: opacity 2s ease-in-out;
+            border-radius: 50%;
+            box-shadow: 0px 10px 20px rgba(238, 7, 61, 0.3); 
+        }
+        #message {
+            display: none;
+            font-size: 20px;
+            color: #d63384;
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        button:hover {
+            background-color: #e60073;
+        }
+        /*#myVideo {
+    display: none;  
+    margin-top: 20px;
+    border-radius: 15px; 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);*/
+
+
+    </style>
+</head>
+<body>
+    <h1>Hey Abi! 💖</h1>
+    <p>Click the button below for a surprise!</p>
+    <button onclick="showTeddy()">Click Me</button>
+    <br><br>
+    <!--<div id="heartContainer"></div>-->
+    <img id="myTeddy" src="teddy.jpeg">
+    <!--<img id="myTeddy2" src="teddy.jpeg">-->
+    <p id="message">Just like this teddy, may your life always be filled with warmth and hugs! 🤗</p>
+
+    <!-- Background Music -->
+    <!--<audio id="bgMusic" loop>
+        <source src="kallolam.mp3" type="audio/mp3">
+        Your browser does not support the audio element.  
+    </audio>-->
+    <video id="myVideo" width="320" height="240" controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+
+    <script>
+        function showTeddy() {
+            let teddy = document.getElementById("myTeddy");
+            //let love = document.getElementById("myImage2");
+            let message = document.getElementById("message");
+            let music = document.getElementById("bgMusic");
+            //let video = document.getElementById("myVideo");
+
+
+            teddy.style.visibility = "visible";
+            setTimeout(() => {  // Delay for smooth transition
+                teddy.style.opacity = "1";
+            }, 50);
+            message.style.display = "block";
+                        // Play music when button is clicked
+            music.play();
+            //video.style.display = "block";  // Show the video
+            //video.play();  // Automatically start playing the video
+
+
+          } 
+    </script>
+</body>
+</html>

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-      
-    </style>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body >
-   
-        <input type="text" class="main message" id="user1">
-  
+<body>
 
-<input type="text" id="user" placeholder="username" style="background-color: aqua; font-size: large;">
-<img src="op" alt="">
-<script>
-let menu = document.getElementById("user1");
-menu.classList.toggle("message")
-console.log(menu);
-
-</script>
+<div class="container">
+    <blockquote>
+    <p>Abhinaya was born on <abbr title="11-04-2005">b-date</abbr>  on the earth.When she born all are think that one angel come to Earth.</p>
+    <p>to print this click <kbd>ctrl + p</kbd></p>
+    <footer>Abi fans</footer>
+</blockquote>
+<ul id="userlist">
+  <li>pavani</li>
+</ul>
 </body>
+<script>
+  let userlist = document.getElementById("userlist");
+  let list = document.createElement("li");
+  list.innerHTML="pushpa";
+  userlist.appendChild(list);
+</script>
 </html>
